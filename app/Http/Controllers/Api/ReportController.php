@@ -230,7 +230,7 @@ class ReportController extends AbstractController
                         'action' => 'unreadUpdate',
                     ]
                 ];
-                Task::deliver(new PushTask($params, false));
+                // Task::deliver(new PushTask($params, false));
             }
             //
             return Base::retSuccess('保存成功', $report);

@@ -94,12 +94,12 @@ class IndexController extends InvokeController
             return "Forbidden Access";
         }
         // 删除过期的临时表数据
-        Task::deliver(new DeleteTmpTask('wg_tmp_msgs', 1));
-        Task::deliver(new DeleteTmpTask('tmp', 24));
+        // Task::deliver(new DeleteTmpTask('wg_tmp_msgs', 1));
+        // Task::deliver(new DeleteTmpTask('tmp', 24));
         // 自动归档任务
-        Task::deliver(new AutoArchivedTask());
+        // Task::deliver(new AutoArchivedTask());
         // 任务到期邮件提醒
-        Task::deliver(new OverdueRemindEmailTask());
+        // Task::deliver(new OverdueRemindEmailTask());
 
         return "success";
     }

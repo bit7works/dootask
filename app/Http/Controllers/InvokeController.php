@@ -45,7 +45,7 @@ class InvokeController extends BaseController
                 ]);
                 $task->setApiWebsocket($apiWebsocket);
                 $task->setApiUserid($userid);
-                Task::deliver($task);
+                // Task::deliver($task);
                 return Base::retSuccess('wait');
             }
         }

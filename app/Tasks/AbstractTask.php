@@ -44,7 +44,7 @@ abstract class AbstractTask extends Task
     public function finish()
     {
         foreach ($this->newTask AS $task) {
-            Task::deliver($task);
+            // Task::deliver($task);
         }
     }
 

@@ -85,9 +85,9 @@ class WebSocketService implements WebSocketHandlerInterface
                         ],
                     ]));
                     // 通知上线
-                    Task::deliver(new LineTask($userid, true));
+                    // Task::deliver(new LineTask($userid, true));
                     // 推送离线时收到的消息
-                    Task::deliver(new PushTask("RETRY::" . $userid));
+                    // Task::deliver(new PushTask("RETRY::" . $userid));
                 }
                 break;
 
@@ -176,7 +176,7 @@ class WebSocketService implements WebSocketHandlerInterface
      */
     public function onClose(Server $server, $fd, $reactorId)
     {
-        Task::deliver(new LineTask($this->getUserid($fd), false));  // 通知离线
+        // Task::deliver(new LineTask($this->getUserid($fd), false));  // 通知离线
         $this->deleteUser($fd);
     }
 
@@ -251,7 +251,7 @@ class WebSocketService implements WebSocketHandlerInterface
                 ]
             ];
             $task = new PushTask($params, false);
-            Task::deliver($task);
+            // Task::deliver($task);
         }
     }
 }

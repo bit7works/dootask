@@ -128,6 +128,6 @@ class ProjectColumn extends AbstractModel
             ]
         ];
         $task = new PushTask($params, false);
-        Task::deliver($task);
+        // Task::deliver($task);
     }
 }

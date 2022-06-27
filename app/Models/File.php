@@ -289,7 +289,7 @@ class File extends AbstractModel
             'msg' => $msg
         ];
         $task = new PushTask($params, false);
-        Task::deliver($task);
+        // Task::deliver($task);
     }
 
     /**

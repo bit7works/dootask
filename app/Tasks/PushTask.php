@@ -167,7 +167,7 @@ class PushTask extends AbstractTask
                     ]);
                     $task = new PushTask($key, $retryOffline);
                     $task->delay($delay);
-                    Task::deliver($task);
+                    // Task::deliver($task);
                 } else {
                     try {
                         $swoole->push($fid, Base::array2json($msg));
