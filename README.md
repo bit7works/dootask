@@ -133,3 +133,10 @@ Follow these steps to complete the project migration after the new project is in
 # Running commands in a project
 ./cmd uninstall
 ```
+
+
+## DEV
+```
+npm install
+rm -rf ./public/js/build && npx mix --production
+```

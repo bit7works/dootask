@@ -93,7 +93,8 @@ export default {
         },
 
         showDown() {
-            return this.isDesktop && ['login', 'index', 'manage-dashboard'].includes(this.$route.name)
+            // return this.isDesktop && ['login', 'index', 'manage-dashboard'].includes(this.$route.name)
+            return false;
         }
     },
 
